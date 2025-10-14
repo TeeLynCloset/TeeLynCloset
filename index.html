@@ -1,54 +1,265 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion Elegant</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Luxe - Thuê Trang Phục Cao Cấp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #a48a68;
+            --primary-dark: #8e7456;
+            --text-dark: #333;
+            --text-light: #fff;
+            --bg: #fdfcf9;
+        }
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        /* 🔸 NAVBAR */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .logo {
+            font-family: 'Lora', serif;
+            font-size: 26px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* 🔸 HERO SECTION */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1581457176711-a88a8d11d13f?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+        }
+        .hero::before {
+            content:"";
+            position:absolute;
+            inset:0;
+            background: rgba(0,0,0,0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-family: 'Lora', serif;
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background 0.3s ease;
+        }
+        .btn:hover { background: var(--primary-dark); }
+
+        /* 🔸 SECTION */
+        section {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 25px;
+        }
+        section h2 {
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--text-dark);
+            position: relative;
+        }
+        section h2::after {
+            content: "";
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            display: block;
+            margin: 15px auto 0;
+        }
+
+        /* 🔸 GRID CARD */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+        .info {
+            padding: 20px;
+            text-align: center;
+        }
+        .info h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .info p {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        /* 🔸 FOOTER */
+        footer {
+            background: #2b2b2b;
+            color: #ccc;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        footer p { font-size: 14px; margin-bottom: 15px; }
+        .social-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        /* 🔸 RESPONSIVE */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav a { margin-left: 15px; font-size: 14px; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 16px; }
+            section h2 { font-size: 28px; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">FASHION ELEGANT</div>
-    <nav>
-      <a href="#">Trang chủ</a>
-      <a href="#">Sản phẩm</a>
-      <a href="#">Giới thiệu</a>
-      <a href="#">Liên hệ</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Đẳng cấp thời trang</h1>
-      <p>Phong cách – Sang trọng – Tự tin</p>
-      <a href="#" class="btn">Khám phá ngay</a>
-    </div>
-  </section>
+    <!-- 🔸 NAVBAR -->
+    <header>
+        <div class="logo">Fashion Luxe</div>
+        <nav>
+            <a href="#new">Hàng Mới</a>
+            <a href="#category">Trang Phục</a>
+            <a href="#accessories">Phụ Kiện</a>
+            <a href="#contact">Liên Hệ</a>
+        </nav>
+    </header>
 
-  <section class="products">
-    <h2>Bộ sưu tập nổi bật</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47" alt="Outfit 1">
-        <h3>Outfit Nữ</h3>
-        <p>Thanh lịch – Hiện đại</p>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Outfit 2">
-        <h3>Outfit Nam</h3>
-        <p>Phong cách – Tự tin</p>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Outfit 3">
-        <h3>Phụ kiện</h3>
-        <p>Tạo điểm nhấn cá tính</p>
-      </div>
-    </div>
-  </section>
+    <!-- 🔸 HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Thuê Trang Phục Cao Cấp Cho Mọi Dịp</h1>
+            <p>Tỏa sáng theo cách của bạn — mà không cần sở hữu mọi thứ.</p>
+            <a href="https://zalo.me/so_dien_thoai_cua_ban" class="btn">Thuê Ngay</a>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Fashion Elegant. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    <!-- 🔸 NEW ARRIVALS -->
+    <section id="new">
+        <h2>Hàng Mới Về</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599818836592-886f77977a48?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Đầm Dạ Hội Vàng</h4><p>350.000đ/ngày</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1596700810793-1b96a09a5c8e?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Váy Công Sở</h4><p>250.000đ/ngày</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599723384232-a7d5308695d7?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Áo Dài Truyền Thống</h4><p>300.000đ/ngày</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔸 CATEGORIES -->
+    <section id="category">
+        <h2>Phân Loại Trang Phục</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518772686419-450f68d6015b?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Vest</h4><p>400.000đ/ngày</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1621007932940-796e923f1ef2?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Đầm Dự Tiệc</h4><p>350.000đ/ngày</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1579294248405-c94c92b9514e?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Áo Dài Dịp Lễ</h4><p>300.000đ/ngày</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔸 ACCESSORIES -->
+    <section id="accessories">
+        <h2>Phụ Kiện Đi Kèm</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587840172605-7284b7274028?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Túi Xách</h4><p>100.000đ/ngày</p></div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1623832049929-2d25816ef06c?auto=format&fit=crop&w=800&q=80" alt="">
+                <div class="info"><h4>Trang Sức</h4><p>80.000đ/ngày</p></div>
+            <
