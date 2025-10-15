@@ -16,3 +16,16 @@ prevBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+document.getElementById("exploreBtn").addEventListener("click", (e) => {
+  e.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+
+  const targetSection = document.getElementById("types");
+  const headerHeight = 80; // Chiều cao của header, bạn có thể điều chỉnh
+
+  const targetPosition = targetSection.offsetTop - headerHeight;
+
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth",
+  });
+});
