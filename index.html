@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Fashion Luxe - Thuê Trang Phục Cao Cấp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,171 +18,153 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header>
-      <div class="header-inner">
-        <h1>Fashion Luxe</h1>
+      <div class="header-inner container">
+        <h1 class="logo"><a href="#">Fashion Luxe</a></h1>
         <nav>
-          <a href="#new">Hàng Mới Về</a>
-          <a href="#types">Trang Phục</a>
-          <a href="#accessories">Phụ Kiện</a>
-          <a href="#contact">Liên Hệ</a>
+          <a href="#hero">Trang chủ</a>
+          <a href="#new-arrival">Hàng mới về</a>
+          <a href="#categories">Trang phục</a>
+          <a href="#accessories">Phụ kiện</a>
+          <a href="#how-to-rent">Cách thuê</a>
+          <a href="#contact">Liên hệ</a>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Phong cách tối thượng cho mọi khoảnh khắc.</h2>
-        <a href="#" class="btn" id="exploreBtn">Khám Phá Ngay</a>
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h2>Thuê Trang Phục Cao Cấp</h2>
+          <p>Biến mọi khoảnh khắc trở nên lộng lẫy ✨</p>
+          <a href="#new-arrival" class="btn-primary">Khám phá ngay</a>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="new">
-      <h3>Hàng Mới Về</h3>
-      <div class="carousel-container">
-        <button id="prevBtn" class="carousel-btn prev-btn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="horizontal-scroll-container">
+    <!-- HÀNG MỚI VỀ -->
+    <section id="new-arrival" class="section">
+      <div class="container">
+        <h3>Hàng Mới Về</h3>
+        <div class="grid">
           <div class="card">
-            <img
-              src="https://images.pexels.com/photos/1571731/pexels-photo-1571731.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Đầm dạ hội"
-            />
+            <img src="https://images.pexels.com/photos/1571731/pexels-photo-1571731.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vest Nam Đen" />
             <div class="info">
-              <h4>Đầm Dạ Hội Vàng</h4>
+              <h4>Vest Nam Đen</h4>
+              <p>420.000đ/ngày</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Đầm Dạ Hội" />
+            <div class="info">
+              <h4>Đầm Dạ Hội</h4>
               <p>350.000đ/ngày</p>
             </div>
           </div>
           <div class="card">
-            <img
-              src="https://images.pexels.com/photos/1638641/pexels-photo-1638641.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Đầm công sở"
-            />
-            <div class="info">
-              <h4>Váy Công Sở Thanh Lịch</h4>
-              <p>250.000đ/ngày</p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/18698290/pexels-photo-18698290.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Áo dài"
-            />
+            <img src="https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Áo Dài" />
             <div class="info">
               <h4>Áo Dài Truyền Thống</h4>
               <p>300.000đ/ngày</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÁC LOẠI TRANG PHỤC -->
+    <section id="categories" class="section">
+      <div class="container">
+        <h3>Các Loại Trang Phục</h3>
+        <div class="grid">
           <div class="card">
-            <img
-              src="https://images.pexels.com/photos/1018911/pexels-photo-1018911.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Váy cưới"
-            />
+            <img src="https://images.pexels.com/photos/18698290/pexels-photo-18698290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Áo Dài" />
             <div class="info">
-              <h4>Váy Cưới Tinh Khôi</h4>
-              <p>500.000đ/ngày</p>
+              <h4>Áo Dài</h4>
             </div>
           </div>
-        </div>
-        <button id="nextBtn" class="carousel-btn next-btn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-    </section>
-
-    <section class="section" id="types">
-    <h3>Các Loại Trang Phục</h3>
-    <div class="grid">
-        <a href="vest-nam-nu.html" class="card">
-            <img
-                src="https://images.pexels.com/photos/3319364/pexels-photo-3319364.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Vest"
-            />
+          <div class="card">
+            <img src="https://images.pexels.com/photos/3319364/pexels-photo-3319364.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Đầm" />
             <div class="info">
-                <h4>Vest Nam Nữ</h4>
-                <p>400.000đ/ngày</p>
+              <h4>Đầm Dạ Hội</h4>
             </div>
-        </a>
-        <a href="dam-du-tiec.html" class="card">
-            <img
-                src="https://images.pexels.com/photos/1571731/pexels-photo-1571731.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Đầm"
-            />
-            <div class="info">
-                <h4>Đầm & Váy Dự Tiệc</h4>
-                <p>350.000đ/ngày</p>
-            </div>
-        </a>
-        <a href="ao-dai.html" class="card">
-            <img
-                src="https://images.pexels.com/photos/13444403/pexels-photo-13444403.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Áo dài"
-            />
-            <div class="info">
-                <h4>Áo Dài Dịp Lễ</h4>
-                <p>300.000đ/ngày</p>
-            </div>
-        </a>
-        <a href="cosplay.html" class="card">
-            <img
-                src="https://images.pexels.com/photos/8101514/pexels-photo-8101514.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Cosplay"
-            />
-            <div class="info">
-                <h4>Trang Phục Cosplay</h4>
-                <p>250.000đ/ngày</p>
-            </div>
-        </a>
-    </div>
-</section>
-
-    <section class="section" id="accessories">
-      <h3>Phụ Kiện Đi Kèm</h3>
-      <div class="grid">
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/10393661/pexels-photo-10393661.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Túi xách"
-          />
-          <div class="info">
-            <h4>Túi Xách Dạo Phố</h4>
-            <p>100.000đ/ngày</p>
           </div>
-        </div>
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/20302306/pexels-photo-20302306/free-photo-of-close-up-of-a-woman-s-face.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Trang sức"
-          />
-          <div class="info">
-            <h4>Bộ Trang Sức Sang Trọng</h4>
-            <p>80.000đ/ngày</p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/3317436/pexels-photo-3317436.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Khăn & Mũ"
-          />
-          <div class="info">
-            <h4>Khăn Lụa & Mũ Nón</h4>
-            <p>50.000đ/ngày</p>
+          <div class="card">
+            <img src="https://images.pexels.com/photos/1571731/pexels-photo-1571731.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vest" />
+            <div class="info">
+              <h4>Vest Nam</h4>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PHỤ KIỆN -->
+    <section id="accessories" class="section">
+      <div class="container">
+        <h3>Phụ Kiện Đi Kèm</h3>
+        <div class="grid">
+          <div class="card">
+            <img src="https://images.pexels.com/photos/290523/pexels-photo-290523.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Giày Cao Gót" />
+            <div class="info">
+              <h4>Giày Cao Gót</h4>
+              <p>100.000đ/ngày</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://images.pexels.com/photos/18698290/pexels-photo-18698290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Túi xách" />
+            <div class="info">
+              <h4>Túi Xách</h4>
+              <p>120.000đ/ngày</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://images.pexels.com/photos/3319364/pexels-photo-3319364.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Khăn choàng" />
+            <div class="info">
+              <h4>Khăn Choàng</h4>
+              <p>80.000đ/ngày</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÁCH THUÊ -->
+    <section id="how-to-rent" class="how-to-rent">
+      <div class="container">
+        <h3>Cách Thức Thuê Đồ</h3>
+        <div class="steps">
+          <div class="step">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h4>1. Chọn Trang Phục</h4>
+            <p>Chọn món đồ bạn yêu thích từ bộ sưu tập đa dạng của chúng tôi.</p>
+          </div>
+          <div class="step">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h4>2. Đặt Lịch Thuê</h4>
+            <p>Chọn ngày thuê phù hợp với lịch trình của bạn.</p>
+          </div>
+          <div class="step">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h4>3. Nhận & Trả Đồ</h4>
+            <p>Giao hàng nhanh chóng và trả lại dễ dàng sau khi sử dụng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer id="contact">
-      <div class="footer-content">
+      <div class="footer-content container">
+        <p>© 2025 Fashion Luxe — Tự tin tỏa sáng trong từng khoảnh khắc ✨</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61573913400200"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@teelyn_closet"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
-        <p>Copyright &copy; 2025 Fashion Luxe. All rights reserved.</p>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
