@@ -10,15 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="header-inner">
-        <h1><a href="index.html">Fashion Luxe</a></h1>
+        <h1 class="logo"><a href="index.html">Fashion Luxe</a></h1>
         <nav>
           <a href="index.html">Trang chủ</a>
           <a href="#">Vest Nam Nữ</a>
+          <a href="#gallery-section">Thư viện</a>
+          <a href="#contact">Liên hệ</a>
         </nav>
       </div>
     </header>
@@ -46,12 +52,30 @@
             <p>420.000đ/ngày</p>
           </div>
         </div>
-      </div>
+        </div>
     </main>
 
-    <footer>
+    <section class="gallery-section" id="gallery-section">
+      <h3>Thư Viện Ảnh Thời Trang</h3>
+      <div class="gallery">
+        <img src="https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 1" />
+        <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 2" />
+        <img src="https://images.pexels.com/photos/1571731/pexels-photo-1571731.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 3" />
+        <img src="https://images.pexels.com/photos/18698290/pexels-photo-18698290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 4" />
+        <img src="https://images.pexels.com/photos/1018911/pexels-photo-1018911.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 5" />
+        <img src="https://images.pexels.com/photos/3319364/pexels-photo-3319364.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 6" />
+        <img src="https://images.pexels.com/photos/18698290/pexels-photo-18698290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ảnh 7" />
+      </div>
+    </section>
+
+    <footer id="contact">
       <div class="footer-content">
-        <p>Copyright &copy; 2025 Fashion Luxe. All rights reserved.</p>
+        <p>© 2025 Fashion Luxe — Tự tin tỏa sáng trong từng khoảnh khắc ✨</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
       </div>
     </footer>
   </body>
