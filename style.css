@@ -1,4 +1,4 @@
-/* RESET + FONT */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +6,8 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
   color: #333;
+  background: #fff;
   line-height: 1.5;
 }
 
@@ -24,56 +24,52 @@ header {
   padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo a {
+.logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   color: #c2185b;
-  text-decoration: none;
 }
 nav a {
-  margin-left: 20px;
   text-decoration: none;
+  margin-left: 20px;
   color: #333;
   font-weight: 500;
-  transition: color 0.2s ease;
 }
 nav a:hover {
   color: #c2185b;
 }
 
-/* HERO SECTION */
-.hero-section {
-  background: url('https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1600')
-    center/cover no-repeat;
+/* HERO */
+.hero {
+  background: url('https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
   height: 65vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.45);
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: rgba(0,0,0,0.4);
 }
 .hero-content {
   position: relative;
   text-align: center;
-  color: white;
-  padding: 0 20px;
+  color: #fff;
   max-width: 700px;
+  padding: 0 20px;
 }
 .hero-content h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -81,13 +77,16 @@ nav a:hover {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
 .btn-primary {
   background: #c2185b;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: background 0.3s ease;
+  color: #fff;
 }
 .btn-primary:hover {
   background: #a11249;
@@ -99,8 +98,9 @@ nav a:hover {
   text-align: center;
 }
 .section h3 {
+  font-family: 'Playfair Display', serif;
   color: #c2185b;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-size: 1.8rem;
 }
 
@@ -111,21 +111,19 @@ nav a:hover {
   gap: 25px;
 }
 .card {
-  background: white;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 .card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  display: block;
 }
 .info {
   padding: 15px;
@@ -139,16 +137,7 @@ nav a:hover {
   font-weight: 600;
 }
 
-/* HOW TO RENT */
-.how-to-rent {
-  padding: 60px 0;
-  background: #fdf3f7;
-  text-align: center;
-}
-.how-to-rent h3 {
-  color: #c2185b;
-  margin-bottom: 30px;
-}
+/* STEPS */
 .steps {
   display: flex;
   justify-content: center;
@@ -156,15 +145,21 @@ nav a:hover {
   gap: 30px;
 }
 .step {
-  max-width: 250px;
+  text-align: center;
+  max-width: 200px;
 }
-.step i {
-  font-size: 2rem;
-  color: #c2185b;
-  margin-bottom: 10px;
-}
-.step h4 {
-  margin-bottom: 10px;
+.step-number {
+  background: #c2185b;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 /* FOOTER */
@@ -172,25 +167,12 @@ footer {
   background: #f9d9e5;
   padding: 20px 0;
   text-align: center;
-}
-.footer-content p {
-  margin-bottom: 10px;
-}
-.social-links a {
-  margin: 0 10px;
-  color: #c2185b;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-.social-links a:hover {
-  color: #a11249;
+  color: #333;
+  font-size: 0.95rem;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 50vh;
-  }
   .hero-content h2 {
     font-size: 2rem;
   }
